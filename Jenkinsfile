@@ -1,10 +1,16 @@
+
+
+
+
+
+,rtfgvbq    az+
 pipeline {
     agent { node { label "terraform-node" } } 
     parameters {
                 choice(name: 'deploy_choice', choices:['apply','destroy'],description:'The deployment type')
                   }
     environment {
-        EMAIL_TO = 'fusisoft@gmail.com'
+        EMAIL_TO = 'mbinuintangku@gmail.com'
     }
     stages {
         stage('1.Terraform init') {
@@ -41,7 +47,7 @@ pipeline {
                 }
         stage ('5. Email Notification') {
             steps {
-               mail bcc: 'fusisoft@gmail.com', body: '''Terraform deployment is completed.
+               mail bcc: 'mbinuintangku@gmail.com', body: '''Terraform deployment is completed.
                Let me know if the changes look okay.
                Thanks,
                Dominion System Technologies,

@@ -38,7 +38,7 @@ resource "kubernetes_service_account" "service-account" {
 ################################################################################
 # Install Load Balancer Controler With Helm
 ################################################################################
-
+/*
 resource "helm_release" "lb" {
   name       = "aws-load-balancer-controller"
   repository = "https://aws.github.io/eks-charts"
@@ -60,7 +60,7 @@ resource "helm_release" "lb" {
 
   set {
     name  = "image.repository"
-    value = "602401143452.dkr.ecr.${var.main-region}.amazonaws.com/amazon/aws-load-balancer-controller"
+    value = "032795972194.dkr.ecr.${var.main-region}.amazonaws.com/mbi-ecr"
   }
 
   set {
@@ -78,4 +78,4 @@ resource "helm_release" "lb" {
     value = var.cluster_name
   }
 }
-
+*/
